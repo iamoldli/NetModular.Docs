@@ -1,7 +1,7 @@
 ﻿module.exports = {
   base: '/docs/',
   port: 7220,
-  dest: '../src/WebHost/wwwroot/docs',
+  dest: 'dist',
   head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
   markdown: {
     lineNumbers: true
@@ -26,7 +26,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2019-10-12' },
+          { text: '更新日志', link: '/update/2019-10-28' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -82,11 +82,7 @@
               {
                 title: '基础框架',
                 collapsable: false,
-                children: [
-                  ['/frendEnd/framework/Utils', '通用库 (nm-lib-utils)'],
-                  ['/frendEnd/framework/Icon', '图标库 (nm-lib-icon)'],
-                  ['/frendEnd/framework/Skins', '皮肤库 (nm-lib-skins)']
-                ]
+                children: [['/frendEnd/Framework', '核心框架 (netmodular-ui)']]
               },
               {
                 title: '基础组件',
