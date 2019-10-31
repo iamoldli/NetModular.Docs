@@ -16,7 +16,7 @@
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'NetModular',
+      title: 'NetModular基于.Net Core平台的模块化快速开发解决方案',
       description: '为中小型企业而生的基于.Net Core平台的模块化快速开发解决方案'
     }
   },
@@ -26,7 +26,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2019-10-28' },
+          { text: '更新日志', link: '/update/2019-10-31' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -189,7 +189,10 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2019-10-31', '2019-10-31'],
+              ['/update/2019-10-28', '2019-10-28'],
               ['/update/2019-10-12', '2019-10-12'],
+              ['/update/2019-09-29', '2019-09-29'],
               ['/update/2019-09-12', '2019-09-12'],
               ['/update/2019-09-04', '2019-09-04'],
               ['/update/2019-08-30', '2019-08-30']
