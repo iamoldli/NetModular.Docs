@@ -1,1 +1,1 @@
-<sponsor/>
+<nm-sponsor/>

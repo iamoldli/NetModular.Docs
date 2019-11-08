@@ -16,17 +16,18 @@
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'NetModular基于.Net Core平台的模块化快速开发解决方案',
+      title: 'NetModular',
       description: '为中小型企业而生的基于.Net Core平台的模块化快速开发解决方案'
     }
   },
   themeConfig: {
+    lastUpdated: '最后更新时间:',
     locales: {
       '/': {
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2019-10-31' },
+          { text: '更新日志', link: '/update/2019-11-08' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -78,65 +79,11 @@
             title: '前端',
             collapsable: false,
             children: [
-              ['/frendEnd/', '介绍说明'],
-              {
-                title: '基础框架',
-                collapsable: false,
-                children: [['/frendEnd/Framework', '核心框架 (netmodular-ui)']]
-              },
-              {
-                title: '基础组件',
-                collapsable: false,
-                children: [
-                  ['/frendEnd/components/Container', '容器 (nm-container)'],
-                  ['/frendEnd/components/Scrollbar', '滚动条 (nm-scrollbar)'],
-                  ['/frendEnd/components/Box', '盒子 (nm-box)'],
-                  ['/frendEnd/components/Button', '按钮 (nm-button)'],
-                  ['/frendEnd/components/Dialog', '对话框 (nm-dialog)'],
-                  ['/frendEnd/components/Checkbox', '多选框 (nm-checkbox)'],
-                  ['/frendEnd/components/Select', '下拉框 (nm-select)'],
-                  ['/frendEnd/components/Form', '基础表单 (nm-form)'],
-                  [
-                    '/frendEnd/components/FormDialog',
-                    '对话框表单 (nm-form-dialog)'
-                  ],
-                  ['/frendEnd/components/FormPage', '页表单 (nm-form-page)'],
-                  ['/frendEnd/components/List', '列表页 (nm-list)'],
-                  [
-                    '/frendEnd/components/ListDialog',
-                    '对话框列表页 (nm-list-dialog)'
-                  ],
-                  [
-                    '/frendEnd/components/ListAgile',
-                    '敏捷列表页 (nm-list-agile)'
-                  ],
-                  ['/frendEnd/components/Details', '详情页 (nm-details)'],
-                  [
-                    '/frendEnd/components/ColorPicker',
-                    '颜色选择器 (nm-color-picker)'
-                  ],
-                  [
-                    '/frendEnd/components/IconPicker',
-                    '图标选择器 (nm-icon-picker)'
-                  ],
-                  [
-                    '/frendEnd/components/Upload',
-                    '文件上传 (nm-upload-single)'
-                  ],
-                  ['/frendEnd/components/DragSort', '拖动排序 (nm-drag-sort)'],
-                  ['/frendEnd/components/Split', '面板分割 (nm-split)'],
-                  ['/frendEnd/components/Drawer', '抽屉 (nm-drawer)']
-                ]
-              },
-              {
-                title: '皮肤机制',
-                collapsable: false,
-                children: [
-                  ['/frendEnd/skins/', '使用说明'],
-                  ['/frendEnd/skins/Custom', '自定义皮肤'],
-                  ['/frendEnd/skins/ThirdPart', '第三方皮肤']
-                ]
-              }
+              ['/frendEnd/Framework', '核心框架'],
+              ['https://nm.iamoldli.com/docs/ui', '组件介绍'],
+              ['/frendEnd/CssHelper', 'Css帮助类'],
+              ['/frendEnd/Skins', '皮肤机制'],
+              ['/frendEnd/Login', '自定义登录页']
             ]
           },
           {
@@ -189,6 +136,7 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2019-11-08', '2019-11-08'],
               ['/update/2019-10-31', '2019-10-31'],
               ['/update/2019-10-28', '2019-10-28'],
               ['/update/2019-10-12', '2019-10-12'],

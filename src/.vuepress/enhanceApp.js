@@ -1,7 +1,6 @@
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-// import Components from 'netmodular-ui/packages/components/index.js'
-// import 'netmodular-ui/packages/styles/app.scss'
+import 'netmodular-ui/packages/styles/app.scss'
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
@@ -12,6 +11,10 @@ export default ({
   //注册Element-UI
   Vue.use(ElementUI)
 
-  //注册Skins组件
-  // Vue.use(Components)
+  //导入图标
+  import('netmodular-ui/public/font/iconfont.js')
+  //注册UI组件
+  import('netmodular-ui/packages/components/index.js').then(m => {
+    Vue.use(m.default)
+  })
 }
