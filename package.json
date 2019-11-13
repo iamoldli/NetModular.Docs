@@ -1,7 +1,7 @@
 {
   "name": "netmodular-docs",
   "version": "1.0.0",
-  "description": "NetModular官方文档",
+  "description": "NetModular前端框架",
   "private": true,
   "main": "index.js",
   "scripts": {
