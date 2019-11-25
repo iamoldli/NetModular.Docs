@@ -23,7 +23,7 @@ footer: 用代码改变世界 | Copyright © 2019-present Oldli
 
 > IDE
 >
-> > [Visual Studio 2017+](https://visualstudio.microsoft.com/zh-hans/downloads/)、[Visual Studio Code](https://code.visualstudio.com/)
+> > [Visual Studio 2019+](https://visualstudio.microsoft.com/zh-hans/downloads/)、[Visual Studio Code](https://code.visualstudio.com/)
 
 > 后端
 >

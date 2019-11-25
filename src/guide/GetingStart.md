@@ -4,7 +4,7 @@
 
 ## 创建数据库
 
-目前`NetModular`仅支持代码生成器生成的时候生成实体对应的创建表语句，不支持类似`CodeFirst`的功能，所以在运行项目之前需要先手动创建数据库。数据库文件放在了 [data](https://github.com/iamoldli/NetModular/tree/master/data) 目录中，您可以根据自己的需要来创建指定的数据库。
+本框架支持多种数据库，代码中默认采用 SQLite 数据库，所以您获取最新的代码后是可以直接就能跑起来的。同时目前本框架已支持自动创建数据库功能，但是自动创建的数据库没有数据，所以为了方便调试，源码中已上传了其他数据库脚本，脚本文件放在了 [data](https://github.com/iamoldli/NetModular/tree/master/data) 目录中，您可以根据自己的需要来创建指定的数据库。
 
 ## 配置
 

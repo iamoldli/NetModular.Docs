@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2019-11-13' },
+          { text: '更新日志', link: '/update/2019-11-24' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -95,11 +95,7 @@
                 collapsable: false,
                 children: []
               },
-              {
-                title: '通用模块 (Common)',
-                collapsable: false,
-                children: []
-              },
+              ['/modules/Common', '通用模块 (Common)'],
               {
                 title: '代码生成器 (CodeGenerator)',
                 collapsable: false,
@@ -136,6 +132,8 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2019-11-24', '2019-11-24'],
+              ['/update/2019-11-17', '2019-11-17'],
               ['/update/2019-11-13', '2019-11-13'],
               ['/update/2019-11-08', '2019-11-08'],
               ['/update/2019-10-31', '2019-10-31'],

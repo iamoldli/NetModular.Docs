@@ -11,8 +11,6 @@ export default ({
   //注册Element-UI
   Vue.use(ElementUI)
 
-  //导入图标
-  import('netmodular-ui/public/font/iconfont.js')
   //注册UI组件
   import('netmodular-ui/packages/components/index.js').then(m => {
     Vue.use(m.default)

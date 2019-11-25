@@ -5,38 +5,5 @@
       <img style="width:300px;" :src="$withBase(`/images/airpay.jpg`)" />
       <img style="width:300px;" :src="$withBase(`/images/wechat.jpg`)" />
     </el-card>
-    <el-divider>打赏记录，感谢~</el-divider>
-    <el-table :data="data" border size="small" style="width:100%;">
-      <el-table-column prop="name" label="姓名" align="center" />
-      <el-table-column prop="value" label="金额(元)" align="center">
-        <template v-slot="{row}">￥{{row.value}}</template>
-      </el-table-column>
-      <el-table-column prop="date" label="日期" align="center" />
-    </el-table>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      data: [
-        {
-          name: 'D*d',
-          value: 10,
-          date: '2019-09-25'
-        },
-        {
-          name: '*懿辉',
-          value: 168,
-          date: '2019-10-30'
-        }
-      ]
-    }
-  }
-}
-</script>
-<style>
-table {
-  margin: 0;
-}
-</style>
