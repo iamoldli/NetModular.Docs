@@ -104,7 +104,7 @@
 
 ## 启动服务端
 
-这里就使用命令来启动，进入`src/WebHost`目录，打开 CMD 或 PowerShell 执行以下命令
+这里就使用命令来启动，进入`src/Admin/WebHost`目录，打开 CMD 或 PowerShell 执行以下命令
 
 ```
 dotnet watch run
@@ -128,7 +128,7 @@ _为什么用 6220 作为默认端口号，因为我对象生日是 6 月 22~_
 前端运行环境依赖`Node.js 10+`，如果无法启动请检查自己的版本是否匹配`node -v`。
 :::
 
-进入`src/WebUI`目录，执行以下命令：
+进入`src/Admin/UI/module-admin`目录，执行以下命令：
 
 ```
 npm install
@@ -142,14 +142,18 @@ npm run serve
 
 访问[http://localhost:5220/app/](http://localhost:5220/app/)浏览，默认账户密码为 admin/admin
 
+::: warning
+单独启动前端，路径的 app 后面一定要带上/
+:::
+
 ## 发布
 
-进入`src/WebUI`目录，执行以下命令打包前端代码：
+进入`src/Admin/UI/module-admin`目录，执行以下命令打包前端代码：
 
 ```
 npm run build
 ```
 
-成功后打包的文件会保存到`src/WebHost/wwwroot/app`目录下面
+成功后打包的文件会保存到`src/Admin/WebHost/wwwroot/app`目录下面
 
 然后用 vs 打开项目，发布 WebHost 即可
