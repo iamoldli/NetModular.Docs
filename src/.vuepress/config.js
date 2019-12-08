@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2019-11-24' },
+          { text: '更新日志', link: '/update/2019-12-08' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -79,11 +79,13 @@
             title: '前端',
             collapsable: false,
             children: [
+              ['/frendEnd/DevEnvironment', '开发环境'],
               ['/frendEnd/Framework', '核心框架'],
               ['https://nm.iamoldli.com/docs/ui', '组件介绍'],
               ['/frendEnd/CssHelper', 'Css帮助类'],
               ['/frendEnd/Skins', '皮肤机制'],
-              ['/frendEnd/Login', '自定义登录页']
+              ['/frendEnd/Login', '自定义登录页'],
+              ['/frendEnd/Q&A', 'Q&A']
             ]
           },
           {
@@ -132,6 +134,7 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2019-12-08', '2019-12-08'],
               ['/update/2019-11-24', '2019-11-24'],
               ['/update/2019-11-17', '2019-11-17'],
               ['/update/2019-11-13', '2019-11-13'],
