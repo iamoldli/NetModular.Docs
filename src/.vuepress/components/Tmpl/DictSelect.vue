@@ -9,7 +9,7 @@ export default {
         attrs: [
           {
             name: 'v-model/value',
-            desc: '选择的值',
+            desc: '选择的字典值',
             type: 'Number/Arrary',
             opt: '-',
             def: '-'
@@ -102,7 +102,7 @@ export default {
           {
             name: 'change',
             desc: '选中值发生变化时触发',
-            params: '目前的选中值'
+            params: '目前的选中字典值'
           },
           {
             name: 'visible-change',

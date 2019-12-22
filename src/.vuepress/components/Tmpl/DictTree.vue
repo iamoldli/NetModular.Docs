@@ -9,7 +9,7 @@ export default {
         attrs: [
           {
             name: 'v-model/value',
-            desc: '选择的值',
+            desc: '选择字典值',
             type: 'Number/Arrary',
             opt: '-',
             def: '-'
@@ -106,7 +106,7 @@ export default {
           {
             name: 'change',
             desc: '选中值发生变化时触发',
-            params: '第一个参数当前选中值，多选为数组，单选为数据项的id，第二个参数为选择的对象'
+            params: '第一个参数当前选中的字典值，多选为数组，第二个参数为选择的对象'
           },
           {
             name: 'reset',

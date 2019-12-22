@@ -2,7 +2,7 @@
 
 通用模块是一个非常基础的模块，它里面的东西应当可以被所有模块所使用。
 
-## 配置项
+## 配置项说明
 
 ```json
 //通用模块
@@ -22,9 +22,11 @@
 
 两个组件都需要两个必须的属性，`group`分组编码和`code`字典编码
 
-### 字典下拉框组件`nm-dict-select`
+## 字典下拉框组件
 
-下拉框组件与其他下拉框组件用法一样，可以多选、过滤等
+#### 组件名称：`nm-dict-select`
+
+该组件与其他下拉框组件用法一样，可以多选、过滤等
 
 <Tmpl-DictSelect/>
 
@@ -38,7 +40,9 @@
 
 <nm-img id="20191123210428"/>
 
-### 字典树组件`nm-dict-tree`
+## 字典树组件
+
+#### 组件名称：`nm-dict-tree`
 
 <Tmpl-DictTree/>
 
@@ -64,7 +68,9 @@
 因为本框架采用模块化设计，为了更好的区分上传文件的路径，附件上传时必须指定`module`和`group`两个属性
 :::
 
-### 图片预览(nm-attachment-img)
+## 图片预览组件
+
+#### 组件名称：`nm-attachment-img`
 
 因为在前端后分离模式下，原生的 img 标签没有办法在请求头中添加 token，所以如果上传的图片需要登录才能访问，必须自行做处理，而该组件就是解决这个问题的~
 
@@ -74,7 +80,9 @@
 <nm-attachment-img :id="id" />>
 ```
 
-### 图片上传(nm-attachment-upload-img)
+## 图片上传组件
+
+#### 组件名称：`nm-attachment-upload-img`
 
 一般情况下，图片上传都需要预览功能，就像上面所说的，如果上传的图片需要登录才能访问，必须自行做处理，而该组件就是解决这个问题的~
 
@@ -92,7 +100,9 @@
 
 <nm-img id="20191124171338" />
 
-### 单文件上传(nm-attachment-upload-single)
+## 单文件上传组件
+
+#### 组件名称：`nm-attachment-upload-single`
 
 该组件与图片上传属性类似~
 
@@ -107,3 +117,39 @@
 ```
 
 <nm-img id="20191124172649" />
+
+## 附件下载
+
+为了方便大家下载附件，在该模块的前端`index.js`文件中，已经将对应的方法扩展为了 Vue 的实例方法
+
+```js
+import './api'
+import store from './store'
+import routes from './routes'
+import components from './components'
+import module from './module'
+
+export default {
+  module,
+  routes,
+  store,
+  components,
+  callback({ Vue }) {
+    // 附件上传地址
+    Vue.prototype.$attachment = {
+      // 上传地址
+      uploadUrl: $api.common.attachment.getUploadUrl(),
+      // 下载方法
+      download(id) {
+        $api.common.attachment.download(id)
+      }
+    }
+  }
+}
+```
+
+上面的 callback 方法会在系统初始化的时候被调用，所以，您如果需要下载附件，只需使用如下方法即可：
+
+```js
+this.$attachment.download(id) //id为附件的id
+```
