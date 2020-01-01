@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2019-12-15' },
+          { text: '更新日志', link: '/update/2020-01-01' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -60,24 +60,19 @@
             title: '框架',
             collapsable: false,
             children: [
-              ['/framework/', '预览'],
-              ['/framework/Utils', '通用库'],
-              ['/framework/Data', '数据访问'],
-              ['/framework/Cache', '缓存'],
-              ['/framework/Logging', '日志'],
-              ['/framework/Mapper', '对象映射'],
-              ['/framework/FluentValidation', '模型验证'],
-              ['/framework/Auth', '身份认证'],
-              ['/framework/Swagger', '接口文档'],
-              ['/framework/RabbitMQ', 'RabbitMQ']
-            ]
-          },
-          {
-            title: '规范',
-            collapsable: false,
-            children: [
-              ['/guidelines/CodeGuidelines', '编码规范'],
-              ['/guidelines/DevGuidelines', '开发规范']
+              ['/framework/00_Host', '主机(Host)'],
+              ['/framework/01_Utils', '通用库(Utils)'],
+              ['/framework/02_Data', '数据访问(Data)'],
+              ['/framework/03_Logging', '日志(Logging)'],
+              ['/framework/04_Mapper', '对象映射(Mapper)'],
+              ['/framework/05_Swagger', '接口文档(Swagger)'],
+              ['/framework/06_Cache', '缓存(Cache)'],
+              ['/framework/07_Validation', '模型验证(Validation)'],
+              ['/framework/08_Auth', '身份认证(Auth)'],
+              ['/framework/09_Module', '模块抽象(Module)'],
+              ['/framework/10_MQ', '消息队列(MQ)'],
+              ['/framework/11_Quartz', '任务调度(Quartz)'],
+              ['/framework/12_Excel', 'Excel']
             ]
           },
           {
@@ -97,27 +92,23 @@
             title: '模块',
             collapsable: false,
             children: [
-              {
-                title: '权限管理 (Admin)',
-                collapsable: false,
-                children: []
-              },
-              ['/modules/Common', '通用模块 (Common)'],
-              {
-                title: '代码生成器 (CodeGenerator)',
-                collapsable: false,
-                children: []
-              },
-              {
-                title: '任务调度 (Quartz)',
-                collapsable: false,
-                children: []
-              },
-              {
-                title: '人事档案 (PersonnelFiles)',
-                collapsable: false,
-                children: []
-              }
+              ['/modules/00_Admin', '00_权限管理 (Admin)'],
+              ['/modules/01_Common', '01_通用模块 (Common)'],
+              ['/modules/02_CodeGenerator', '02_CodeGenerator(代码生成器)'],
+              ['/modules/03_Quartz', '03_Quartz(任务调度)'],
+              ['/modules/04_Crawler', '04_Crawler(爬虫模块)'],
+              ['/modules/05_Cas', '05_Cas(统一认证)'],
+              ['/modules/06_IM', '06_IM(即时通讯)'],
+              ['/modules/07_Forum', '07_Forum(论坛模块)'],
+              ['/modules/08_Blog', '08_Blog(博客模块)']
+            ]
+          },
+          {
+            title: '规范',
+            collapsable: false,
+            children: [
+              ['/guidelines/CodeGuidelines', '编码规范'],
+              ['/guidelines/DevGuidelines', '开发规范']
             ]
           },
           {
@@ -138,7 +129,7 @@
             title: '更新日志',
             collapsable: false,
             children: [
-              ['/update/2019-12-15', '2019-12-15'],
+              ['/update/2019-12-24', '2019-12-24'],
               ['/update/2019-12-08', '2019-12-08'],
               ['/update/2019-11-24', '2019-11-24'],
               ['/update/2019-11-17', '2019-11-17'],

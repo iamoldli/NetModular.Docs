@@ -16,7 +16,11 @@
 
 ### 文件说明
 
+> cache：存放与缓存有关的配置信息
+
 > db：存放与数据库有关的配置信息
+
+> excel：存放与 Excel 操作有关的配置信息
 
 > host：存放站点启动有关的配置信息
 
@@ -79,10 +83,6 @@
       "Database": "Nm_Common"
     },
     {
-      "Name": "PersonnelFiles",
-      "Database": "Nm_PersonnelFiles"
-    },
-    {
       "Name": "Quartz",
       "Database": "Nm_Quartz"
     }
@@ -114,10 +114,9 @@ dotnet watch run
 
 <nm-img id="20190821144717"/>
 
-#### 可访问[http://localhost:6220/swagger/index.html](http://localhost:6220/swagger/index.html)浏览接口文档。
+#### 可访问 <a href="http://localhost:6220/swagger/index.html" title="为什么用 6220 作为默认端口号，因为我媳妇儿生日是 6 月 22~">http://localhost:6220/swagger/index.html</a> 浏览接口文档。
 
-_为什么用 6220 作为默认端口号，因为我对象生日是 6 月 22~_
-
+<p></p>
 <nm-img id="20190821145531"/>
 
 ## 启动前端
@@ -140,7 +139,7 @@ npm run serve
 
 <nm-img id="20190821145614"/>
 
-访问[http://localhost:5220/app/](http://localhost:5220/app/)浏览，默认账户密码为 admin/admin
+访问 [http://localhost:5220/app/](http://localhost:5220/app/) 浏览，默认账户密码为 admin/admin
 
 ::: warning
 单独启动前端，路径的 app 后面一定要带上/

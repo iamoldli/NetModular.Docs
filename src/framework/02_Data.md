@@ -24,4 +24,4 @@ NetModular 已经做好了集成，包括数据库自动注入上下文`DbContex
 
 ### 实体(Entity)
 
-未完~
+努力完善中~
