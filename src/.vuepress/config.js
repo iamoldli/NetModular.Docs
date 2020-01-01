@@ -45,7 +45,8 @@
               ['/guide/', '介绍'],
               ['/guide/Modular', '我的模块化'],
               ['/guide/GetingStart', '快速上手'],
-              ['/guide/CreateModule', '创建一个模块']
+              ['/guide/CreateModule', '创建一个模块'],
+              ['/guide/InstallModule', '安装一个模块']
             ]
           },
           {
