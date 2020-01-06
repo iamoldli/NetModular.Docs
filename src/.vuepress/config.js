@@ -97,11 +97,13 @@
               ['/modules/01_Common', '01_通用模块 (Common)'],
               ['/modules/02_CodeGenerator', '02_CodeGenerator(代码生成器)'],
               ['/modules/03_Quartz', '03_Quartz(任务调度)'],
-              ['/modules/04_Crawler', '04_Crawler(爬虫模块)'],
-              ['/modules/05_Cas', '05_Cas(统一认证)'],
-              ['/modules/06_IM', '06_IM(即时通讯)'],
-              ['/modules/07_Forum', '07_Forum(论坛模块)'],
-              ['/modules/08_Blog', '08_Blog(博客模块)']
+              ['/modules/04_PersonnelFiles', '04_PersonnelFiles(人事档案)'],
+              ['/modules/05_Crawler', '05_Crawler(爬虫模块)'],
+              ['/modules/06_Cas', '06_Cas(统一认证)'],
+              ['/modules/07_IM', '07_IM(即时通讯)'],
+              ['/modules/08_Forum', '08_Forum(论坛模块)'],
+              ['/modules/09_Blog', '09_Blog(博客模块)'],
+              ['/modules/10_Contract', '10_Contract(合同管理)']
             ]
           },
           {
