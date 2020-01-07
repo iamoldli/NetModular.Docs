@@ -120,6 +120,12 @@ namespace NetModular.Module.Admin.Web.Controllers
 }
 ```
 
-上面的控制器中的接口，经过解析后对应如下权限：
+上面的控制器中的接口，经过解析后对应如下权限信息：
 
 <nm-img id="20200103144652" />
+
+每个权限都有一个唯一的编码，这个编码的格式是 `Area_Controller_Action_HttpMethod`，四个单词分别表示：
+
+**Area**：区域编码，也就是模块编码，如`Admin`
+
+**Controller**：控制器名称，如`Config`，对应`ConfigController`
