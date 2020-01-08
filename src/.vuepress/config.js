@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2020-01-01' },
+          { text: '更新日志', link: '/update/2020-01-08' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -61,19 +61,20 @@
             title: '框架',
             collapsable: false,
             children: [
-              ['/framework/00_Host', '主机(Host)'],
-              ['/framework/01_Utils', '通用库(Utils)'],
-              ['/framework/02_Data', '数据访问(Data)'],
-              ['/framework/03_Logging', '日志(Logging)'],
-              ['/framework/04_Mapper', '对象映射(Mapper)'],
-              ['/framework/05_Swagger', '接口文档(Swagger)'],
-              ['/framework/06_Cache', '缓存(Cache)'],
-              ['/framework/07_Validation', '模型验证(Validation)'],
-              ['/framework/08_Auth', '身份认证(Auth)'],
-              ['/framework/09_Module', '模块抽象(Module)'],
-              ['/framework/10_MQ', '消息队列(MQ)'],
-              ['/framework/11_Quartz', '任务调度(Quartz)'],
-              ['/framework/12_Excel', 'Excel']
+              ['/framework/00_Host', '主机(00_Host)'],
+              ['/framework/01_Utils', '通用库(01_Utils)'],
+              ['/framework/02_Data', '数据访问(02_Data)'],
+              ['/framework/03_Logging', '日志(03_Logging)'],
+              ['/framework/04_Mapper', '对象映射(04_Mapper)'],
+              ['/framework/05_Swagger', '接口文档(05_Swagger)'],
+              ['/framework/06_Cache', '缓存(06_Cache)'],
+              ['/framework/07_Validation', '模型验证(07_Validation)'],
+              ['/framework/08_Auth', '身份认证(08_Auth)'],
+              ['/framework/09_Module', '模块抽象(09_Module)'],
+              ['/framework/10_MQ', '消息队列(10_MQ)'],
+              ['/framework/11_Quartz', '任务调度(11_Quartz)'],
+              ['/framework/12_Excel', 'Excel(12_Excel)'],
+              ['/framework/13_Config', '配置管理(13_Config)']
             ]
           },
           {
@@ -132,6 +133,7 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2020-01-08', '2020-01-08'],
               ['/update/2019-12-24', '2019-12-24'],
               ['/update/2019-12-08', '2019-12-08'],
               ['/update/2019-11-24', '2019-11-24'],
