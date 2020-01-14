@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2020-01-08' },
+          { text: '更新日志', link: '/update/2020-01-14' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -133,6 +133,7 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2020-01-14', '2020-01-14'],
               ['/update/2020-01-08', '2020-01-08'],
               ['/update/2019-12-24', '2019-12-24'],
               ['/update/2019-12-08', '2019-12-08'],
