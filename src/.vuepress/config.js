@@ -1,5 +1,5 @@
 ﻿module.exports = {
-  base: '/docs/',
+  base: '',
   port: 7220,
   dest: 'dist',
   head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
