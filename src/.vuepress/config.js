@@ -83,7 +83,7 @@
             children: [
               ['/frendEnd/DevEnvironment', '开发环境'],
               ['/frendEnd/Framework', '核心框架'],
-              ['https://nm.iamoldli.com/docs/ui', '组件介绍'],
+              ['https://docs.17mkh.com/ui', '组件介绍'],
               ['/frendEnd/CssHelper', 'Css帮助类'],
               ['/frendEnd/Skins', '皮肤机制'],
               ['/frendEnd/Login', '自定义登录页'],

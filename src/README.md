@@ -35,7 +35,7 @@ footer: 用代码改变世界 | Copyright © 2019-present Oldli
 
 ## 演示地址
 
-Demo：[https://nm.iamoldli.com](https://nm.iamoldli.com)  
+Demo：[https://demo.17mkh.com](https://demo.17mkh.com)  
 账户：admin  
 密码：admin
 

@@ -1,10 +1,10 @@
 # NetModular Docs
 
-This repository contains the NetModular documentation hosted at [https://nm.iamoldli.com/docs](https://nm.iamoldli.com/docs).
+This repository contains the NetModular documentation hosted at [https://docs.17mkh.com](https://docs.17mkh.com).
 
 # Demo
 
-Demo：[https://nm.iamoldli.com](https://nm.iamoldli.com)  
+Demo：[https://demo.17mkh.com](https://demo.17mkh.com)  
 Account：admin  
 Password：admin
 
