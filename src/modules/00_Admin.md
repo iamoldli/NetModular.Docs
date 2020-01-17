@@ -223,4 +223,54 @@ public Task<IResultModel> Select(string group, string code)
 
 ### 2、匿名即可访问
 
-允许匿名访问就是不登录也可以访问的权限，比如`AccountController`中的`Login`接口
+允许匿名访问就是不登录也可以访问的权限，这种权限只需要在 Action 方法上添加`AllowAnonymous`特性即可
+
+比如`AccountController`中的登录`Login`接口
+
+```csharp
+[HttpPost]
+[AllowAnonymous]
+[DisableAuditing]
+[Description("登录")]
+public async Task<IResultModel> Login([FromBody]LoginModel model)
+{
+    model.IP = _loginInfo.IPv4;
+    var result = await _service.Login(model);
+    if (result.Successful)
+    {
+        var account = result.Data;
+        var claims = new[]
+        {
+            new Claim(ClaimsName.AccountId,account.Id.ToString()),
+            new Claim(ClaimsName.AccountName,account.Name),
+            new Claim(ClaimsName.AccountType,model.AccountType.ToInt().ToString()),
+            new Claim(ClaimsName.Platform,model.Platform.ToInt().ToString())
+        };
+
+        return _loginHandler.Hand(claims);
+    }
+
+    return ResultModel.Failed(result.Msg);
+}
+```
+
+以及`SystemController`中的获取系统配置信息的`Config`接口
+
+```csharp
+[HttpGet]
+[AllowAnonymous]
+[DisableAuditing]
+[Description("获取系统配置信息")]
+public IResultModel<SystemConfigModel> Config()
+{
+    var result = new ResultModel<SystemConfigModel>();
+
+    var b = _configModel.Base;
+    if (b.Logo.IsNull() && b.LogoPath.NotNull())
+    {
+        b.Logo = new Uri($"{Request.GetHost()}/upload/{b.LogoPath}").ToString().ToLower();
+    }
+
+    return result.Success(_configModel);
+}
+```
