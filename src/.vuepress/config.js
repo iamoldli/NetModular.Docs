@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2020-01-14' },
+          { text: '更新日志', link: '/update/2020-01-21' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',

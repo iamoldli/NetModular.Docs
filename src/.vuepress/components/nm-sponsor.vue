@@ -1,11 +1,11 @@
 <template>
   <div class="sponsor">
-    <el-divider>请老刘同志(作者媳妇儿)喝杯咖啡~</el-divider>
+    <el-divider>请作者媳妇儿喝杯二锅头~</el-divider>
     <el-card style="text-align:center;">
       <img style="height:322px;" :src="$withBase(`/images/airpay.jpg`)" />
       <img style="height:322px;" :src="$withBase(`/images/wechat.jpg`)" />
     </el-card>
-    <el-divider>感谢以下老铁的打赏~</el-divider>
+    <el-divider>NetModular携全体模块，感谢以下老铁们的打赏~</el-divider>
     <el-table :data="data" border show-summary size="small" style="width:100%;">
       <el-table-column prop="name" label="姓名" align="center" />
       <el-table-column prop="value" label="金额(元)" align="center" />
