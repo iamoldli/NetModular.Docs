@@ -32,6 +32,8 @@ Install-Package NetModular.Module.Quartz.Web -Version 1.5.1
   "Password": "",
   //是否创建数据库和表
   "CreateDatabase": true,
+  //是否创建数据库后初始化数据
+  "InitData": true,
   //模块列表
   "Modules": [
     {
@@ -57,44 +59,6 @@ Install-Package NetModular.Module.Quartz.Web -Version 1.5.1
 ```
 
 数据库配置信息根据您自己的情况进行设置，上面采用了 SQLite 数据库，并且开启了自动创建数据库和表功能，当应用启动时会自动创建模块的数据库和表，如果没有开启该功能，你需要自行创建~
-
-## 添加模块配置信息
-
-按照约定，每个模块都有可能包含自己的配置信息，而模块的配置信息统一放到 config 目录下的 module.json 文件中，所以我们需要添加 Quartz 模块的相关配置
-
-```json
-{
-  //文件上传路径
-  "UploadPath": "",
-  //临时文件路径
-  "TempPath": "",
-  //权限管理模块配置
-  "Admin": {
-    //是否开启审计功能
-    "Auditing": true,
-    //是否开启权限验证
-    "PermissionValidate": true
-  },
-  //通用模块
-  "Common": {
-    //附件上传路径
-    "AttachmentPath": "",
-    //字典缓存是否启用
-    "DictCacheEnabled": true
-  },
-  //任务调度
-  "Quartz": {
-    //是否开启
-    "Enabled": true,
-    //实例名称
-    "InstanceName": "QuartzServer",
-    //表前缀
-    "TablePrefix": "QRTZ_",
-    //序列化方式
-    "SerializerType": "JSON"
-  }
-}
-```
 
 ## 启动后端
 

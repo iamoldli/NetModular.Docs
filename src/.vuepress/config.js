@@ -27,7 +27,7 @@
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '更新日志', link: '/update/2020-01-21' },
+          { text: '更新日志', link: '/update/2020-02-10' },
           { text: '打赏', link: '/Sponsor' },
           {
             text: '选择语言',
@@ -74,7 +74,7 @@
               ['/framework/10_MQ', '消息队列(10_MQ)'],
               ['/framework/11_Quartz', '任务调度(11_Quartz)'],
               ['/framework/12_Excel', 'Excel(12_Excel)'],
-              ['/framework/13_Config', '配置管理(13_Config)']
+              ['/framework/13_Options', '配置管理(13_Options)']
             ]
           },
           {
@@ -133,6 +133,7 @@
             title: '更新日志',
             collapsable: false,
             children: [
+              ['/update/2020-02-10', '2020-02-10'],
               ['/update/2020-01-14', '2020-01-14'],
               ['/update/2020-01-08', '2020-01-08'],
               ['/update/2019-12-24', '2019-12-24'],

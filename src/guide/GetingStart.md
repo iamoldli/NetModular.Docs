@@ -30,8 +30,6 @@
 
 > logging：与日志有关的配置信息
 
-> module：与模块有关的配置信息
-
 :::
 
 ::: warning
@@ -65,7 +63,9 @@
   //密码
   "Password": "",
   //是否创建数据库和表
-  "CreateDatabase": false,
+  "CreateDatabase": true,
+  //是否创建数据库后初始化数据
+  "InitData": true,
   //模块列表
   "Modules": [
     {
