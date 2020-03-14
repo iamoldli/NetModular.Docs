@@ -2,13 +2,9 @@
 
 本篇文档让你能够快速的启动`NetModular`项目。
 
-## 创建数据库
-
-本框架支持多种数据库，代码中默认采用 SQLite 数据库，所以您获取最新的代码后是可以直接就能跑起来的。同时目前本框架已支持自动创建数据库功能，但是自动创建的数据库没有数据，所以为了方便调试，源码中已上传了其他数据库脚本，脚本文件放在了 [data](https://github.com/iamoldli/NetModular/tree/master/data) 目录中，您可以根据自己的需要来创建指定的数据库。
-
 ## 配置
 
-进入`src/WebHost/config`目录，如下：
+进入`src/Admin/WebHost/config`目录，如下：
 
 <nm-img id="20190821142628"/>
 
@@ -24,17 +20,13 @@
 
 > host：存放站点启动有关的配置信息
 
-> cache：与缓存有关的配置信息
-
 > jwt：与 JWT 认证有关的配置信息
 
 > logging：与日志有关的配置信息
 
 :::
 
-::: warning
-
-### Note
+::: warning 警告
 
 如上图所示，配置信息按照功能放在的不同的文件中，而每一种配置文件都有两种类型，其中带`.Development.json`表示开发环境配置文件，顾名思义，当你是开发环境时，配置信息以带`.Development.json`的为先，否则以不带`.Development.json`的为先。
 
@@ -55,7 +47,7 @@
   //数据库版本
   "Version": "",
   //数据库地址
-  "Server": "..\\..\\data\\SQLite",
+  "Server": ".",
   //端口号
   "Port": 0,
   //用户名
@@ -64,37 +56,33 @@
   "Password": "",
   //是否创建数据库和表
   "CreateDatabase": true,
-  //是否创建数据库后初始化数据
+  //是否创建数据库后执行初始化脚本
   "InitData": true,
+  //PostgreSQL数据库名称，仅PostgreSQL数据库有效
+  "NpgsqlDatabaseName": null,
   //模块列表
   "Modules": [
     {
       //模块名称
       "Name": "Admin",
+      //表前缀
+      "Prefix": "",
       //数据库名称
-      "Database": "Nm_Admin"
-    },
-    {
-      "Name": "CodeGenerator",
-      "Database": "Nm_CodeGenerator"
-    },
-    {
-      "Name": "Common",
-      "Database": "Nm_Common"
-    },
-    {
-      "Name": "Quartz",
-      "Database": "Nm_Quartz"
+      "Database": "Nm_Admin",
+      //自定义连接信息
+      "ConnectionString": "",
+      //自定义版本号
+      "Version": ""
     }
   ]
 }
 ```
 
-::: warning
+::: warning 警告
 
-### Note
+本框架支持多种数据库，代码中默认采用 SQLite 数据库，所以您获取最新的代码后是可以直接就能跑起来的。如果需要其它数据库，请按照上面的说明修改配置信息。
 
-切换不同的数据库，请修改对应的连接信息！
+同时目前本框架已支持自动创建数据库以及初始化数据功能(目前仅支持初始化 Admin 模块的数据)。
 
 :::
 
@@ -121,7 +109,7 @@ dotnet watch run
 
 ## 启动前端
 
-::: warning
+::: warning 警告
 前端运行环境依赖`Node.js 10+`，如果无法启动请检查自己的版本是否匹配`node -v`。  
 前端运行环境依赖`Node.js 10+`，如果无法启动请检查自己的版本是否匹配`node -v`。  
 前端运行环境依赖`Node.js 10+`，如果无法启动请检查自己的版本是否匹配`node -v`。
@@ -141,7 +129,7 @@ npm run serve
 
 访问 [http://localhost:5220/app/](http://localhost:5220/app/) 浏览，默认账户密码为 admin/admin
 
-::: warning
+::: warning 警告
 单独启动前端，路径的 app 后面一定要带上/
 :::
 

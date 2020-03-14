@@ -24,6 +24,18 @@ export default {
     return {
       data: [
         {
+          name: '*涛',
+          value: 20,
+          date: '2020-02-27',
+          from: 1
+        },
+        {
+          name: 'w*z',
+          value: 20,
+          date: '2020-02-25',
+          from: 2
+        },
+        {
           name: '*风',
           value: 50,
           date: '2020-01-17',
