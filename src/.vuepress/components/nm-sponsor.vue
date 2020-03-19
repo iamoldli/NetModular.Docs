@@ -1,6 +1,6 @@
 <template>
   <div class="sponsor">
-    <el-divider>请作者媳妇儿喝杯二锅头~</el-divider>
+    <el-divider>请作者媳妇儿吃一碗酸辣粉~</el-divider>
     <el-card style="text-align:center;">
       <img style="height:322px;" :src="$withBase(`/images/airpay.jpg`)" />
       <img style="height:322px;" :src="$withBase(`/images/wechat.jpg`)" />
@@ -23,6 +23,12 @@ export default {
   data() {
     return {
       data: [
+        {
+          name: '*墨',
+          value: 20,
+          date: '2020-03-19',
+          from: 1
+        },
         {
           name: '*涛',
           value: 20,
