@@ -4,77 +4,122 @@
 
 ## 配置
 
-进入`src/Admin/WebHost/config`目录，如下：
-
-<nm-img id="20190821142628"/>
-
-::: tip
-
-### 文件说明
-
-> cache：存放与缓存有关的配置信息
-
-> db：存放与数据库有关的配置信息
-
-> excel：存放与 Excel 操作有关的配置信息
-
-> host：存放站点启动有关的配置信息
-
-> jwt：与 JWT 认证有关的配置信息
-
-> logging：与日志有关的配置信息
-
-:::
-
-::: warning 警告
-
-如上图所示，配置信息按照功能放在的不同的文件中，而每一种配置文件都有两种类型，其中带`.Development.json`表示开发环境配置文件，顾名思义，当你是开发环境时，配置信息以带`.Development.json`的为先，否则以不带`.Development.json`的为先。
-
-:::
-
-## 配置数据库
-
-根据自己的数据库配置信息，编辑`db.json`文件，配置信息说明：
-
-已 SQLite 为例，也是代码中的默认配置
+配置信息都保存在`appsettings.json`文件中，根据功能来区分，如下：
 
 ```json
 {
-  //是否开启日志
-  "Logging": false,
-  //数据库类型 0、SqlServer 1、MySql 2、SQLite
-  "Dialect": 2,
-  //数据库版本
-  "Version": "",
-  //数据库地址
-  "Server": ".",
-  //端口号
-  "Port": 0,
-  //用户名
-  "UserId": "",
-  //密码
-  "Password": "",
-  //是否创建数据库和表
-  "CreateDatabase": true,
-  //是否创建数据库后执行初始化脚本
-  "InitData": true,
-  //PostgreSQL数据库名称，仅PostgreSQL数据库有效
-  "NpgsqlDatabaseName": null,
-  //模块列表
-  "Modules": [
-    {
-      //模块名称
-      "Name": "Admin",
-      //表前缀
+  //主机配置
+  "Host": {
+    //地址
+    "Urls": "http://*:6220",
+    //开启Swagger
+    "Swagger": false,
+    //代理
+    "Proxy": false,
+    //指定跨域访问时预检请求的有效期，单位秒，默认30分钟
+    "PreflightMaxAge": 0
+  },
+  //日志配置
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Error",
+      "Override": {
+        "Microsoft": "Error",
+        "System": "Error"
+      }
+    },
+    "WriteTo": [
+      //输出到文件
+      {
+        "Name": "File",
+        "Args": {
+          //文件路径
+          "path": "log/log.log",
+          //文件滚动方式
+          "rollingInterval": "Day",
+          //消息输出格式
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+          //文件数量
+          "retainedFileCountLimit": 60,
+          //使用缓冲，提高写入效率
+          "buffered": false
+        }
+      }
+    ]
+  },
+  //数据库配置
+  "Db": {
+    //是否开启日志
+    "Logging": false,
+    //数据库类型 0、SqlServer 1、MySql 2、SQLite
+    "Dialect": 2,
+    //数据库版本
+    "Version": "",
+    //数据库地址
+    "Server": "",
+    //端口号
+    "Port": 0,
+    //用户名
+    "UserId": "",
+    //密码
+    "Password": "",
+    //是否创建数据库和表
+    "CreateDatabase": true,
+    //是否创建数据库后执行初始化脚本
+    "InitData": true,
+    //PostgreSQL数据库名称，仅PostgreSQL数据库有效
+    "NpgsqlDatabaseName": null,
+    //模块列表
+    "Modules": [
+      {
+        //模块名称
+        "Name": "Admin",
+        //表前缀
+        "Prefix": "",
+        //数据库名称
+        "Database": "Nm_Admin",
+        //自定义连接信息
+        "ConnectionString": "",
+        //自定义版本号
+        "Version": ""
+      }
+    ]
+  },
+  //缓存配置
+  "Cache": {
+    //缓存提供器：0、MemoryCache 1、Redis
+    "Provider": 0,
+    //Redis配置
+    "Redis": {
       "Prefix": "",
-      //数据库名称
-      "Database": "Nm_Admin",
-      //自定义连接信息
-      "ConnectionString": "",
-      //自定义版本号
-      "Version": ""
+      "ConnectionString": "127.0.0.1"
     }
-  ]
+  },
+  //Excel配置
+  "Excel": {
+    //Excel类库：0、EPPlus 1、NPOI 2、OpenXml (暂时只实现了EPPlus)
+    "Provider": 0,
+    //Excel操作时产生的临时文件存储根路径
+    "TempPath": ""
+  },
+  //OSS配置
+  "OSS": {
+    //存储提供器：0、本地存储 1、七牛
+    "Provider": 0,
+    //七牛存储配置
+    "Qiniu": {
+      //Key
+      "AccessKey": "",
+      //密钥
+      "SecretKey": "",
+      //域名(结尾不包含/)
+      "Domain": "",
+      //空间名称
+      "Bucket": "",
+      //存储区域：0、华 东 1、华 北 2、华 南 3、北 美 4、东南亚
+      "Zone": 0
+    }
+  }
 }
 ```
 
