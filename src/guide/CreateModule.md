@@ -8,6 +8,12 @@
 
 当然，上面的方式仅适合新项目，如果是已有数据库了，还是要根据数据库来生成项目文件的，不过暂时还没做这个功能，目前代码生成器只能算是 1.0 版本，距离我最终想要的版本还有很大距离，比如可视化拖拽配置前端页面等等，任重而道远~
 
+> [代码生成器](https://github.com/iamoldli/NetModular.Module.CodeGenerator) 是一个独立模块，一般需要安装后才能使用。
+
+示例源码仓库（已经安装了代码生成器模块）：
+- github: https://github.com/iamoldli/NetModular.Demo
+- gitee: https://gitee.com/laoli/NetModular.Demo
+
 ## 1、添加模块
 
 打开模块创建下的模块列表页面，点击添加按钮，填写模块名称、编号、编码、图标等信息
