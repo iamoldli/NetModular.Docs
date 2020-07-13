@@ -2,6 +2,10 @@
 
 本篇文档让你能够快速的启动`NetModular`项目。
 
+示例源码仓库：
+- github: https://github.com/iamoldli/NetModular.Demo
+- gitee: https://gitee.com/laoli/NetModular.Demo
+
 ## 配置
 
 配置信息都保存在`appsettings.json`文件中，根据功能来区分，如下：
