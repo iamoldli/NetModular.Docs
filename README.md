@@ -1,9 +1,10 @@
 # NetModular Docs
+本仓库是NetModular框架的文档源码，你可以自行获取源码并启动。
 
-This repository contains the NetModular documentation hosted at [https://docs.17mkh.com](https://docs.17mkh.com).
+## 启动方式
 
-# Demo
+```
+npm i
 
-Demo：[https://demo.17mkh.com](https://demo.17mkh.com)  
-Account：admin  
-Password：admin
+npm run dev
+```
